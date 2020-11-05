@@ -1,0 +1,2 @@
+-includeresource: ./resources
+-privatepackage: com.liferay.eclipse.headless.app

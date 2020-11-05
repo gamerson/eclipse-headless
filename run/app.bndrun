@@ -1,0 +1,29 @@
+-standalone: true
+-resolve.effective: active
+-runblacklist:\
+	osgi.identity;filter:='(osgi.identity=org.osgi.compendium)',\
+	osgi.identity;filter:='(osgi.identity=osgi.annotation)',\
+	osgi.identity;filter:='(osgi.identity=osgi.cmpn)',\
+	osgi.identity;filter:='(osgi.identity=osgi.core)'
+-runbundles: com.liferay.eclipse.headless.app;version='[1.0.0,1.0.1)', org.bndtools.applaunch;version='[5.2.0,5.2.1)', org.eclipse.equinox.app;version='[1.4.300,1.4.301)', org.eclipse.equinox.common;version='[3.10.600,3.10.601)', org.eclipse.equinox.registry;version='[3.8.600,3.8.601)'
+-runee: JavaSE-1.8
+-runfw: org.eclipse.osgi;version=3.15
+-runproperties:\
+	eclipse.application=com.liferay.eclipse.headless.app.application,\
+	org.osgi.framework.bootdelegation='javax.management,javax.net.ssl',\
+	osgi.instance.area=/tmp/workspace
+-runprovidedcapabilities: ${native_capability}
+-runrequires: \
+	bnd.identity;id='com.liferay.eclipse.headless.app',\
+	bnd.identity;id='org.bndtools.applaunch'
+-runsystempackages:\
+	org.slf4j;version=1.6.2,\
+	org.slf4j.event;version=1.6.2,\
+	org.slf4j.helpers;version=1.6.2,\
+	org.slf4j.spi;version=1.6.2,\
+	org.slf4j;version=1.7.0,\
+	org.slf4j.event;version=1.7.0,\
+	org.slf4j.helpers;version=1.7.0,\
+	org.slf4j.spi;version=1.7.0,\
+	sun.misc
+-runtrace: true

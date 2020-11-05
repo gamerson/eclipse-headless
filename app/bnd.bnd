@@ -1,2 +1,3 @@
+Bundle-SymbolicName: com.liferay.eclipse.headless.app;singleton:=true
 -includeresource: ./resources
 -privatepackage: com.liferay.eclipse.headless.app
